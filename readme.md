@@ -1,15 +1,17 @@
-# Inheritance.
+# Ruby Tutorial
+
+## Inheritance.
 Ruby provides Inheritance and does not support multiple Inheritance.
 Classes inherit from "Object" which provides basic functionalities like "clone" and all.
 But, like it provides alternative to multiple inheritance with "Modules".
 Object is a child of "BasicObject" which is an empty shell class.
 Inheritance is for reusing functionality, not enforcing interfaces
 
-# Class Methods
+## Class Methods
 Class Methods are more like static methods. They run independent of instances. Unlike java though, a class method cannot be invoked on an instance, but can only be invoked on class
 Prefix method name with "self."
 
-# Class Variables
+## Class Variables
 Class variable is more of a static variable.
 its defined with "@@"
 Class variables are shared among all subclasses and all objects. They are less famous.
@@ -42,7 +44,7 @@ Ternary operator exists in Ruby as well. ?:.
 - Like +=, Ruby also supports Conditional Initialization. i.e. ||= and &&=.
 ~ ship ||= Spaceship.new
 -meaning, if ship is empty or null, create a new object and assign. Only caveat is that it wont work for boolean values.
-# Block.
+## Block.
 Block is a piece of code that can be passed into methods that take block as an argument.
 Two ways to define it.
 1. Multiline block is defined by putting it between 'do','end' keywords
@@ -75,7 +77,7 @@ Conversion between these two types of integers is managed by Ruby automatically.
 _ is used to seperate groups of digits to make reading easy.
 100_000_456 = 100000456. Ruby ignores _
 
-# Strings
+## Strings
 Ruby supports Heredoc strings
 message = <<EOS
   There;s no place I can
@@ -90,7 +92,7 @@ Square brackets can be used to do multiple functions.
 "Hello World"["or"] -> or (Finds substring)
 "ha " * 3 -> "ha ha ha "
 
-# Symbols.
+## Symbols.
 Symbols are special kind of objects.Think of them as Mix between constant and a string.  Other langs use enums in place of them.
 Each symbol is an instance of class Symbol.
 They are created by laterals as follows
@@ -100,14 +102,14 @@ They are created by laterals as follows
 Ruby ensures that they are globally unique and immutable. First time you use the symbol an object is created. Same obj used in subsequent calls.
 They work great as hash keys as follows.
 
-# Arrays.
+## Arrays.
 Array.new(3) -> [nil, nil, nil]
 Array.new(3,true) -> [true,true,true]
 Array.new(3){"abc"} -> ["abc","abc","abc"]
 Array.new(3){Array.new(3)} -> [[nil, nil, nil],[nil, nil, nil],[nil, nil, nil]]
 arr[-number] is used to navigate from back of array.
 
-# Enumarable
+## Enumarable
 Is a module that has has more than 50 handy functions. It is more like a collections api in Java.
 -like Map to transform each element of a collection
   [1,2,3].map{|v| v*10} -> [10,20,30]
@@ -116,7 +118,7 @@ Is a module that has has more than 50 handy functions. It is more like a collect
 -other include
   sort, select, etc..
 
-# Hashes
+## Hashes
 Is a ordered collection of Key, value pairs.
 They are of type "Hash". They can be thought of as arrays, with index being customizable instead of numbers.
 The following
@@ -133,7 +135,7 @@ h = Hash.new(0)
 h[:a] -> 0
 -Hashe class also has enumerable module in it, so all enumerable functions can be used on hashes. Except they now operate over both key and values.
 
-# Range
+## Range
 1..5  #[1,5] two dots indicate an inclusive range with upper boundary included
 1...5 #[1,5) three dots indicate an exclusive range with upper boundary not included
 Sample methods
@@ -144,7 +146,7 @@ Sample methods
 - Enumeration functions can also be used on ranges.
 (1..10).map {|v| v*2} -> [2,4,6,8,10,12,14,16,17,18, 20]
 
-# Parallel Assignments and Splat operator
+## Parallel Assignments and Splat operator
 a, b = 1, 2 means a = 1, b = 2
 a = 1,2,3,4 means a = [1,2,3,4] creates an arrary.
 They above line is handy when method returns multiple values as follows.
